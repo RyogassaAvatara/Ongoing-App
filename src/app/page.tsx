@@ -20,7 +20,7 @@ export default function Home() {
         </span>
       </div>
       <p className='text-center max-w-prose'>
-      Transform your notes app with a custom AI chatbot, 
+      Transform your notes app with an AI chatbot, 
       tailored from your saved notes, offering insightful assistance to boost productivity.
       </p>
       <Button size="lg" asChild>
