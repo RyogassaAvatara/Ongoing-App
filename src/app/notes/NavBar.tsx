@@ -8,32 +8,41 @@ import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import AddNoteInfo from "@/components/AddEditNoteInfo";
+import AiChat from "@/components/AiChat";
+import AiButton from "@/components/AiButton";
 
 export default function NavBar() {
-    const [showAddEditNoteInfo, setShowAddEditNoteInfo] = useState(false);
+  const [showAddEditNoteInfo, setShowAddEditNoteInfo] = useState(false);
 
-    return (
-        <>
-        <div className="p-4 shadow"> 
-            <div className="max-w-7xl m-auto flex flex-wrap gap-3 items-center justify-between">
-                <Link href="/notes" className="flex items-center gap-3">
-                    <Image src={logo} alt="IntelliNote Logo" width={40} height={40} />
-                    <span className="font-bold">IntelliNotes</span>
-                </Link>
-                <div className="flex items-center gap-2">
-                    <UserButton afterSignOutUrl="/"
-                    appearance={{
-                        elements: { avatarBox: { width: "2.5rem", height:"2.5rem" } }
-                    }}
-                    />
-                    <Button onClick={() => setShowAddEditNoteInfo(true)}>
-                        <Plus size={20} className="mr-2" />
-                        Add Note
-                    </Button>
-                </div>
+  return (
+    <>
+      <div className="navbar-wrapper">
+        <div className="p-4 shadow navbar">
+          <div className="m-auto flex max-w-7xl flex-wrap items-center justify-between gap-3">
+            <Link href="/notes" className="flex items-center gap-3">
+              <Image src={logo} alt="XYZ Logo" width={40} height={40} />
+              <span className="font-bold">XYZ</span>
+            </Link>
+            <div className="flex items-center gap-2">
+              <UserButton
+                afterSignOutUrl="/"
+                appearance={{
+                  elements: { avatarBox: { width: "2.5rem", height: "2.5rem" } },
+                }}
+              />
+              <Button onClick={() => setShowAddEditNoteInfo(true)}>
+                <Plus size={20} className="mr-2" />
+                Add Note
+              </Button>
+              <AiButton />
             </div>
+          </div>
         </div>
-        <AddNoteInfo open={showAddEditNoteInfo} setOpen={setShowAddEditNoteInfo} />
-        </>
-    );
+      </div>
+      <AddNoteInfo
+        open={showAddEditNoteInfo}
+        setOpen={setShowAddEditNoteInfo}
+      />
+    </>
+  );
 }

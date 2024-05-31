@@ -4,7 +4,7 @@ import { auth } from "@clerk/nextjs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "IntelliNotes - Notes",
+  title: "XYZ - Notes",
 };
 
 export default async function AppPage() {

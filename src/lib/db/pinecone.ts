@@ -12,4 +12,4 @@ const pinecone = new Pinecone({
 
 });
 
-export const notesIndex = pinecone.Index("ai-projec");
+export const notesIndex = pinecone.Index("ai-project");
