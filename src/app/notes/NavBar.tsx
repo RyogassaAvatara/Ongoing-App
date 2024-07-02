@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import AddNoteInfo from "@/components/AddEditNoteInfo";
-import AiChat from "@/components/AiChat";
 import AiButton from "@/components/AiButton";
 
 export default function NavBar() {
@@ -16,8 +15,8 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="navbar-wrapper">
-        <div className="p-4 shadow navbar">
+      <div className="navbar-wrapper sticky top-0 z-50">
+        <div className="p-4 shadow navbar bg-background">
           <div className="m-auto flex max-w-7xl flex-wrap items-center justify-between gap-3">
             <Link href="/notes" className="flex items-center gap-3">
               <Image src={logo} alt="XYZ Logo" width={40} height={40} />
